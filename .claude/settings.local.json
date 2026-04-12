@@ -1,0 +1,53 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker --version)",
+      "Bash(xargs grep:*)",
+      "mcp__code-review-graph__build_or_update_graph_tool",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(curl -s -X POST http://localhost:8000/api/admin/run/pipeline)",
+      "Bash(curl:*)",
+      "Bash(python -c \"import sys, json; d=json.load\\(sys.stdin\\); print\\('\\\\n'.join\\(sorted\\(d['paths'].keys\\(\\)\\)\\)\\)\")",
+      "Bash(python3 -c \"import sys, json; d=json.load\\(sys.stdin\\); print\\('\\\\n'.join\\(sorted\\(d['paths'].keys\\(\\)\\)\\)\\)\")",
+      "Bash(ls:*)",
+      "Bash(WMIC PROCESS WHERE \"Name='python.exe' OR Name='python3.exe' OR Name='python3.11.exe' OR Name='python3.12.exe'\" GET CommandLine,ProcessId)",
+      "Bash(tasklist)",
+      "Bash(wmic process:*)",
+      "Bash(powershell \"Get-CimInstance -ClassName Win32_Process -Filter \\\\\"Name='python.exe'\\\\\" | Select-Object ProcessId,CommandLine | Format-Table -AutoSize -Wrap\")",
+      "Bash(C:\\\\Users\\\\force\\\\anaconda3\\\\python.exe:*)",
+      "Bash(taskkill //F //PID 18600)",
+      "Bash(\"C:\\\\Users\\\\force\\\\anaconda3\\\\python.exe\" -m uvicorn backend.main:app --reload --port 8000)",
+      "Bash(powershell Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | Select-Object OwningProcess:*)",
+      "Bash(powershell Get-CimInstance -ClassName Win32_Process -Filter 'ProcessId=1700 OR ProcessId=20504 OR ProcessId=18600' | Select-Object ProcessId,CommandLine | Format-Table -AutoSize -Wrap:*)",
+      "Bash(powershell Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | Select-Object LocalAddress,LocalPort,OwningProcess,State | Format-Table:*)",
+      "Bash(taskkill //F //PID 31268)",
+      "Bash(taskkill //F //PID 16316)",
+      "Bash(\"C:\\\\Users\\\\force\\\\anaconda3\\\\python.exe\" -m uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000)",
+      "Bash(rm -f backend/db/__pycache__/models.cpython-*.pyc backend/analyzers/__pycache__/*.pyc)",
+      "Bash(taskkill //F //PID 39276)",
+      "Bash(taskkill //F //PID 24028)",
+      "Bash(awk '{print $2}')",
+      "Bash(read pid:*)",
+      "Bash(powershell 'Get-CimInstance -ClassName Win32_Process -Filter \"ProcessId=__TRACKED_VAR__\" | Select-Object ProcessId,CommandLine | Format-List')",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d[0], indent=2\\)\\)\")",
+      "Bash(\"C:\\\\Users\\\\force\\\\anaconda3\\\\python.exe\" -c \"from backend.api.routers.trends import router; print\\([r.path for r in router.routes]\\)\")",
+      "Bash(powershell:*)",
+      "Bash(taskkill //F //PID 27860)",
+      "Bash(rm -rf C:/Users/force/stacks/aionic/backend/api/routers/__pycache__)",
+      "Bash(\"C:\\\\Users\\\\force\\\\anaconda3\\\\python.exe\" -m uvicorn backend.main:app --host 127.0.0.1 --port 8000)",
+      "Bash(\"C:\\\\Users\\\\force\\\\anaconda3\\\\python.exe\" -c \"from backend.api.routers.trends import router; print\\('OK', len\\(router.routes\\), 'routes'\\)\")",
+      "Bash(\"C:\\\\Users\\\\force\\\\anaconda3\\\\python.exe\" -c \"from backend.main import app; routes = [r.path for r in app.routes if 'trends' in getattr\\(r,'path',''\\)]; print\\(routes\\)\")",
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "code-review-graph"
+  ]
+}

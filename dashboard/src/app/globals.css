@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-surface text-slate-100 antialiased;
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-card border border-surface-border rounded-xl p-5;
+  }
+  .badge-write-now {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-success/15 text-success;
+  }
+  .badge-monitor {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-warning/15 text-warning;
+  }
+  .badge-ignore {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-700 text-slate-400;
+  }
+  .badge-high {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-accent/15 text-accent;
+  }
+  .badge-medium {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-500/15 text-yellow-400;
+  }
+  .badge-low {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-700 text-slate-400;
+  }
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply btn bg-accent hover:bg-accent-hover text-white;
+  }
+  .btn-ghost {
+    @apply btn text-slate-400 hover:text-slate-100 hover:bg-surface-hover;
+  }
+  .btn-danger {
+    @apply btn text-danger hover:bg-danger/10;
+  }
+}

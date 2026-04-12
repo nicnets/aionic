@@ -1,0 +1,13 @@
+  1. Start the database + backend (Docker)                                                                                                                                                             
+                                                                                                                                                                                                       
+  cd C:\Users\force\stacks\aionic                                                                                                                                                                      
+  docker compose up                                                                                                                                                                                    
+                                                                                                                                                                                                     
+  This starts PostgreSQL on :5432 and the FastAPI backend on :8000. First run will build the Docker image.
+
+  2. Start the dashboard (separate terminal)
+
+  cd C:\Users\force\stacks\aionic\dashboard
+  npm run dev
+
+  Dashboard runs on :3001.
